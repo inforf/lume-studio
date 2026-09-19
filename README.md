@@ -1,6 +1,6 @@
 # Lumé Studio
 
-Landing page responsiva criada como **projeto demonstrativo de portfólio** para um salão de beleza fictício.
+Landing page responsiva criada como **projeto demonstrativo de portfólio** como conceito visual para o segmento de beleza.
 
 ## Objetivo
 Demonstrar desenvolvimento front-end de uma página comercial moderna, responsiva e orientada a conversão.
@@ -13,6 +13,6 @@ Demonstrar desenvolvimento front-end de uma página comercial moderna, responsiv
 - Design original em tons quentes e rosé
 - SEO básico e acessibilidade estrutural
 
-> Lumé Studio é uma marca fictícia. Nomes, preços, endereço e depoimentos são demonstrativos e não representam uma empresa real.
+> Projeto conceitual e independente. O nome é usado apenas no contexto deste portfólio; preços, contatos, endereço e depoimentos são demonstrativos. Não há vínculo com empresas ou marcas homônimas.
 
 Desenvolvido por Ronaldo Ferreira para fins de portfólio profissional.
