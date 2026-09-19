@@ -132,7 +132,7 @@ h2 {
   inset: 0 0 0 48%;
   z-index: 0;
   content: "";
-  background: url("assets/images/hero.webp") right center / 200% auto no-repeat;
+  background: url("../assets/images/hero.webp") right center / 200% auto no-repeat;
 }
 
 .hero::before {
