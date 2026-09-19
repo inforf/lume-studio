@@ -24,6 +24,19 @@ O projeto informa o uso do Microsoft Clarity e oferece ao visitante a opção de
 
 A implementação foi pensada para demonstrar boas práticas de transparência e controle do usuário. Em um projeto comercial real, a política de privacidade, a base legal aplicável, os responsáveis pelo tratamento e demais requisitos devem ser definidos de acordo com o contexto da empresa e a legislação aplicável.
 
+## Estrutura do projeto
+
+```text
+├── index.html
+├── README.md
+├── assets/
+│   └── images/
+├── css/
+│   └── style.css
+└── js/
+    └── main.js
+```
+
 ## Demonstração
 
 https://inforf.github.io/lume-studio/
