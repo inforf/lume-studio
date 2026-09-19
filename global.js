@@ -3,9 +3,15 @@ const menu = document.querySelector('.menu');
 const nav = document.querySelector('.header nav');
 
 if (menu && nav) {
-  menu.addEventListener('click', () => nav.classList.toggle('open'));
+  menu.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    menu.setAttribute('aria-expanded', String(isOpen));
+  });
   nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => nav.classList.remove('open'));
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menu.setAttribute('aria-expanded', 'false');
+    });
   });
 }
 
