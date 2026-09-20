@@ -1,5 +1,3 @@
-// global.js — privacidade e recursos compartilhados do Lumé Studio
-
 (function () {
   const CONSENT_KEY = 'lume-clarity-consent';
 
