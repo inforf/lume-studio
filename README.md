@@ -34,9 +34,14 @@ A implementação foi pensada para demonstrar boas práticas de transparência e
 ├── css/
 │   └── style.css
 └── js/
-    ├── main.js       # Interações específicas da página
-    └── global.js     # Clarity, consentimento e recursos globais
+    ├── main.js
+    └── global.js
 ```
+
+## Organização do JavaScript
+
+- `main.js`: comportamentos específicos da interface.
+- `global.js`: consentimento, privacidade e integração com o Microsoft Clarity.
 
 ## Demonstração
 
