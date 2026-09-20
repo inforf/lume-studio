@@ -25,8 +25,6 @@ h2 {
   margin: 0.15em 0;
   font-family: "Playfair Display", serif;
 }
-
-/* Cabeçalho */
 .header {
   position: sticky;
   top: 0;
@@ -87,8 +85,6 @@ h2 {
   background: none;
   font-size: 25px;
 }
-
-/* Botões */
 .btn {
   display: inline-block;
   padding: 14px 22px;
@@ -115,8 +111,6 @@ h2 {
   border-color: #fff;
   background: #0005;
 }
-
-/* Hero */
 .hero {
   position: relative;
   display: flex;
@@ -190,8 +184,6 @@ h2 {
   margin-top: 35px;
   font-size: 12px;
 }
-
-/* Seções */
 .section {
   padding: 55px 7%;
 }
@@ -204,8 +196,6 @@ h2 {
 .lead {
   margin-top: 0;
 }
-
-/* Serviços */
 .cards {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -245,8 +235,6 @@ h2 {
   color: #9e3044;
   font-size: 19px;
 }
-
-/* Sobre */
 .about {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -286,8 +274,6 @@ h2 {
   color: var(--ink);
   font-size: 12px;
 }
-
-/* Galeria */
 .gallery {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -305,8 +291,6 @@ h2 {
 .gallery img:hover {
   transform: scale(1.025);
 }
-
-/* Depoimentos */
 .testimonials {
   padding-top: 20px;
 }
@@ -338,8 +322,6 @@ h2 {
   margin-top: 12px;
   color: #776b66;
 }
-
-/* Contato */
 .cta {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -406,8 +388,6 @@ h2 {
   font-size: 8px;
   letter-spacing: 2px;
 }
-
-/* Rodapé */
 footer {
   display: flex;
   align-items: center;
@@ -432,8 +412,6 @@ footer .brand {
   text-decoration: underline;
   cursor: pointer;
 }
-
-/* Privacidade e cookies */
 .cookie-banner {
   position: fixed;
   right: 24px;
@@ -545,8 +523,6 @@ footer .brand {
 .about {
   scroll-margin-top: 76px;
 }
-
-/* Tablet */
 @media (max-width: 1000px) {
   .header nav {
     display: none;
@@ -608,8 +584,6 @@ footer .brand {
     align-items: flex-start;
   }
 }
-
-/* Celular */
 @media (max-width: 620px) {
   .hero {
     min-height: 620px;
