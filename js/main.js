@@ -24,70 +24,34 @@ const openPrivacyButtons = document.querySelectorAll('[data-open-privacy]');
 const closePrivacyButtons = document.querySelectorAll('[data-close-privacy]');
 const consentButtons = document.querySelectorAll('[data-consent]');
 
-let clarityLoaded = false;
-
-function loadClarity() {
-  if (clarityLoaded) {
-    return;
-  }
-
-  clarityLoaded = true;
-
-  (function (c, l, a, r, i, t, y) {
-    c[a] = c[a] || function () {
-      (c[a].q = c[a].q || []).push(arguments);
-    };
-
-    t = l.createElement(r);
-    t.async = 1;
-    t.src = 'https://www.clarity.ms/tag/' + i;
-
-    y = l.getElementsByTagName(r)[0];
-    y.parentNode.insertBefore(t, y);
-  })(window, document, 'clarity', 'script', 'ykk63v4ciq');
+function sendClarityConsent(choice) {
+  const analyticsStorage = choice === 'accepted' ? 'granted' : 'denied';
 
   window.clarity('consentv2', {
     ad_Storage: 'denied',
-    analytics_Storage: 'granted'
+    analytics_Storage: analyticsStorage
   });
 }
 
 function showCookieBanner() {
-  if (cookieBanner) {
-    cookieBanner.hidden = false;
-  }
+  if (cookieBanner) cookieBanner.hidden = false;
 }
 
 function hideCookieBanner() {
-  if (cookieBanner) {
-    cookieBanner.hidden = true;
-  }
+  if (cookieBanner) cookieBanner.hidden = true;
 }
 
 function openPrivacyPanel() {
-  if (privacyPanel) {
-    privacyPanel.hidden = false;
-  }
+  if (privacyPanel) privacyPanel.hidden = false;
 }
 
 function closePrivacyPanel() {
-  if (privacyPanel) {
-    privacyPanel.hidden = true;
-  }
+  if (privacyPanel) privacyPanel.hidden = true;
 }
 
 function saveConsent(choice) {
   localStorage.setItem(CONSENT_KEY, choice);
-
-  if (choice === 'accepted') {
-    loadClarity();
-  } else if (typeof window.clarity === 'function') {
-    window.clarity('consentv2', {
-      ad_Storage: 'denied',
-      analytics_Storage: 'denied'
-    });
-  }
-
+  sendClarityConsent(choice);
   hideCookieBanner();
   closePrivacyPanel();
 }
@@ -101,29 +65,22 @@ closePrivacyButtons.forEach((button) => {
 });
 
 consentButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    saveConsent(button.dataset.consent);
-  });
+  button.addEventListener('click', () => saveConsent(button.dataset.consent));
 });
 
 if (privacyPanel) {
   privacyPanel.addEventListener('click', (event) => {
-    if (event.target === privacyPanel) {
-      closePrivacyPanel();
-    }
+    if (event.target === privacyPanel) closePrivacyPanel();
   });
 }
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    closePrivacyPanel();
-  }
+  if (event.key === 'Escape') closePrivacyPanel();
 });
 
 const savedConsent = localStorage.getItem(CONSENT_KEY);
+sendClarityConsent(savedConsent === 'accepted' ? 'accepted' : 'rejected');
 
-if (savedConsent === 'accepted') {
-  loadClarity();
-} else if (savedConsent !== 'rejected') {
+if (savedConsent !== 'accepted' && savedConsent !== 'rejected') {
   showCookieBanner();
 }
