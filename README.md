@@ -34,7 +34,8 @@ A implementação foi pensada para demonstrar boas práticas de transparência e
 ├── css/
 │   └── style.css
 └── js/
-    └── main.js
+    ├── main.js       # Interações específicas da página
+    └── global.js     # Clarity, consentimento e recursos globais
 ```
 
 ## Demonstração
