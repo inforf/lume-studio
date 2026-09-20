@@ -1,5 +1,3 @@
-// main.js — interações específicas da página Lumé Studio
-
 const menuButton = document.querySelector('.menu');
 const navigation = document.querySelector('.header nav');
 
